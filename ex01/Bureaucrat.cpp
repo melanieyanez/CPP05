@@ -6,7 +6,7 @@
 /*   By: myanez-p <myanez-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 15:59:03 by myanez-p          #+#    #+#             */
-/*   Updated: 2024/05/22 18:57:10 by myanez-p         ###   ########.fr       */
+/*   Updated: 2024/05/22 18:58:51 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ Bureaucrat::Bureaucrat(const std::string &name, const int &grade) : _name(name){
 	this->_grade = grade;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &src) : _name(src.getName()), _grade(src.getGrade()){}
+Bureaucrat::Bureaucrat(const Bureaucrat &src){
+	*this = src;
+}
 
 Bureaucrat::~Bureaucrat(){};
 
@@ -50,6 +52,10 @@ void	Bureaucrat::decrementGrade(){
 	if (this->_grade >= 150)
 		throw GradeTooLowException();
 	this->_grade++;
+}
+
+void	Bureaucrat::signForm(const Form &toSign){
+	//toimplement
 }
 
 std::ostream &operator<<(std::ostream& os, const Bureaucrat &src){
