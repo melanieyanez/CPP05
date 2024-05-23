@@ -6,7 +6,7 @@
 /*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 18:22:03 by myanez-p          #+#    #+#             */
-/*   Updated: 2024/05/23 11:41:49 by melanieyane      ###   ########.fr       */
+/*   Updated: 2024/05/23 19:42:02 by melanieyane      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 #include <iostream>
 
 #include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form{
 	public:
@@ -29,8 +31,8 @@ class Form{
 
 		std::string			getName() const;
 		bool				getSigned() const;
-		const int			getSigningGrade() const;
-		const int			getExecutingGrade() const;
+		int					getSigningGrade() const;
+		int					getExecutingGrade() const;
 
 		void				beSigned(Bureaucrat &signator);
 

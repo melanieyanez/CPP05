@@ -6,7 +6,7 @@
 /*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 15:59:06 by myanez-p          #+#    #+#             */
-/*   Updated: 2024/05/23 11:42:03 by melanieyane      ###   ########.fr       */
+/*   Updated: 2024/05/23 19:44:04 by melanieyane      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 #include <iostream>
 
 #include "Form.hpp"
+
+class Form;
 
 class Bureaucrat{
 

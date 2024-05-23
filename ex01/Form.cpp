@@ -6,15 +6,15 @@
 /*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 18:22:10 by myanez-p          #+#    #+#             */
-/*   Updated: 2024/05/23 12:03:37 by melanieyane      ###   ########.fr       */
+/*   Updated: 2024/05/23 19:54:39 by melanieyane      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form() : _name("Default"), _signingGrade(1), _executingGrade(1), _signed(false){}
+Form::Form() : _name("Default"), _signed(false), _signingGrade(1), _executingGrade(1){}
 
-Form::Form(const std::string &Name, const int &signingGrade, const int &executingGrade) : _name(Name), _signingGrade(signingGrade), _executingGrade(executingGrade), _signed(false)
+Form::Form(const std::string &Name, const int &signingGrade, const int &executingGrade) : _name(Name), _signed(false), _signingGrade(signingGrade), _executingGrade(executingGrade)
 {
 	if (this->_signingGrade > 150 || this->_executingGrade > 150)
 		throw GradeTooLowException();
@@ -43,12 +43,12 @@ bool Form::getSigned() const
 	return this->_signed;
 }
 
-const int Form::getSigningGrade() const
+int Form::getSigningGrade() const
 {
 	return this->_signingGrade;
 }
 
-const int Form::getExecutingGrade() const
+int Form::getExecutingGrade() const
 {
 	return this->_executingGrade;
 }
