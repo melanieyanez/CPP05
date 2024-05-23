@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: myanez-p <myanez-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 18:22:03 by myanez-p          #+#    #+#             */
-/*   Updated: 2024/05/22 18:42:33 by myanez-p         ###   ########.fr       */
+/*   Updated: 2024/05/23 11:41:49 by melanieyane      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class Form{
 		const int			getSigningGrade() const;
 		const int			getExecutingGrade() const;
 
-		void				beSigned(const Bureaucrat &signator);
+		void				beSigned(Bureaucrat &signator);
 
 	private:
 		const std::string 	_name;

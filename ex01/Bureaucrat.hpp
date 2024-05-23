@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: myanez-p <myanez-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 15:59:06 by myanez-p          #+#    #+#             */
-/*   Updated: 2024/05/22 18:37:03 by myanez-p         ###   ########.fr       */
+/*   Updated: 2024/05/23 11:42:03 by melanieyane      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class Bureaucrat{
 		void				incrementGrade();
 		void				decrementGrade();
 
-		void				signForm(const Form &toSign);
+		void				signForm(Form &toSign);
 
 	private:
 		const std::string	_name;
