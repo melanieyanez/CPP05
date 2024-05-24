@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: myanez-p <myanez-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 15:58:48 by myanez-p          #+#    #+#             */
-/*   Updated: 2024/05/22 18:13:30 by myanez-p         ###   ########.fr       */
+/*   Updated: 2024/05/24 08:17:46 by melanieyane      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-
-
 
 int main(){
 	std::cout << "******************************************************" << std::endl;
@@ -24,7 +22,7 @@ int main(){
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what() << '\n';
+		std::cerr << e.what() << std::endl;
 	}
 
 	std::cout << "******************************************************" << std::endl;
@@ -37,7 +35,7 @@ int main(){
 	}
 	catch(const std::exception &e)
 	{
-		std::cerr << e.what() << '\n';
+		std::cerr << e.what() << std::endl;
 	}
 	
 	std::cout << "******************************************************" << std::endl;
@@ -50,7 +48,7 @@ int main(){
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what() << '\n';
+		std::cerr << e.what() << std::endl;
 	}
 
 	std::cout << "******************************************************" << std::endl;
@@ -64,7 +62,7 @@ int main(){
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what() << '\n';
+		std::cerr << e.what() << std::endl;
 	}
 
 	std::cout << "******************************************************" << std::endl;
@@ -78,6 +76,6 @@ int main(){
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what() << '\n';
+		std::cerr << e.what() << std::endl;
 	}
 }

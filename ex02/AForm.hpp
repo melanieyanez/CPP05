@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/22 18:22:03 by myanez-p          #+#    #+#             */
-/*   Updated: 2024/05/24 07:57:40 by melanieyane      ###   ########.fr       */
+/*   Created: 2024/05/23 20:12:11 by melanieyane       #+#    #+#             */
+/*   Updated: 2024/05/24 08:37:20 by melanieyane      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FORM_HPP
-# define FORM_HPP
+#ifndef AFORM_HPP
+# define AFORM_HPP
 
 #include <string>
 #include <iostream>
@@ -20,14 +20,14 @@
 
 class Bureaucrat;
 
-class Form{
+class AForm{
 	public:
-		Form();
-		Form(const std::string &Name, const int &signingGrade, const int &executingGrade);
-		Form(const Form &src);
-		~Form();
+		AForm();
+		AForm(const std::string &Name, const int &signingGrade, const int &executingGrade);
+		AForm(const AForm &src);
+		virtual ~AForm();
 
-		Form	&operator=(const Form &rhs);
+		AForm	&operator=(const AForm &rhs);
 
 		std::string			getName() const;
 		bool				getSigned() const;
@@ -35,6 +35,7 @@ class Form{
 		int					getExecutingGrade() const;
 
 		void				beSigned(const Bureaucrat &signator);
+		virtual void		execute(const Bureaucrat &executor) const = 0;
 
 	private:
 		const std::string 	_name;
@@ -61,6 +62,6 @@ class Form{
 	};
 };
 
-std::ostream &operator<<(std::ostream &os, const Form &src);
+std::ostream &operator<<(std::ostream &os, const AForm &src);
 
 #endif
