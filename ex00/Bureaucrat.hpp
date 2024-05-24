@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: myanez-p <myanez-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 15:59:06 by myanez-p          #+#    #+#             */
-/*   Updated: 2024/05/22 16:50:03 by myanez-p         ###   ########.fr       */
+/*   Updated: 2024/05/24 10:11:16 by melanieyane      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,21 +32,21 @@ class Bureaucrat{
 		void				incrementGrade();
 		void				decrementGrade();
 
+		class GradeTooHighException : public std::exception{
+			virtual const char	*what() const throw(){
+				return "Oops! Grade is too high!";
+			}
+		};
+
+		class GradeTooLowException : public std::exception{
+			virtual const char	*what() const throw(){
+				return "Oops! Grade is too low!";
+			}
+		};
+
 	private:
 		const std::string	_name;
 		int 				_grade;	
-
-	class GradeTooHighException : public std::exception{
-		virtual const char	*what() const throw(){
-			return "Oops! Grade is too high!";
-		}
-	};
-
-	class GradeTooLowException : public std::exception{
-		virtual const char	*what() const throw(){
-			return "Oops! Grade is too low!";
-		}
-	};
 };
 
 std::ostream &operator<<(std::ostream& os, const Bureaucrat &src);

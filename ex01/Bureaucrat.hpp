@@ -6,7 +6,7 @@
 /*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 15:59:06 by myanez-p          #+#    #+#             */
-/*   Updated: 2024/05/23 19:44:04 by melanieyane      ###   ########.fr       */
+/*   Updated: 2024/05/24 10:10:37 by melanieyane      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,21 +38,21 @@ class Bureaucrat{
 
 		void				signForm(Form &toSign);
 
+		class GradeTooHighException : public std::exception{
+			virtual const char	*what() const throw(){
+				return "Oops! Grade is too high!";
+			}
+		};
+
+		class GradeTooLowException : public std::exception{
+			virtual const char	*what() const throw(){
+				return "Oops! Grade is too low!";
+			}
+		};
+
 	private:
 		const std::string	_name;
 		int 				_grade;	
-
-	class GradeTooHighException : public std::exception{
-		virtual const char	*what() const throw(){
-			return "Oops! Grade is too high!";
-		}
-	};
-
-	class GradeTooLowException : public std::exception{
-		virtual const char	*what() const throw(){
-			return "Oops! Grade is too low!";
-		}
-	};
 };
 
 std::ostream &operator<<(std::ostream& os, const Bureaucrat &src);

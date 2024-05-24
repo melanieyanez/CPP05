@@ -6,7 +6,7 @@
 /*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 15:58:48 by myanez-p          #+#    #+#             */
-/*   Updated: 2024/05/24 08:17:21 by melanieyane      ###   ########.fr       */
+/*   Updated: 2024/05/24 11:19:30 by melanieyane      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,4 +101,6 @@ int main() {
     {
         std::cerr << e.what() << std::endl;
     }
+    
+    return 0;
 }
