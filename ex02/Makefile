@@ -1,6 +1,6 @@
 NAME = ex02
 
-SRCS = Bureaucrat.cpp AForm.cpp main.cpp
+SRCS = Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp main.cpp
 OBJS := $(SRCS:%.cpp=%.o)
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98

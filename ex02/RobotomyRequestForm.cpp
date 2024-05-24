@@ -6,7 +6,7 @@
 /*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 08:21:20 by melanieyane       #+#    #+#             */
-/*   Updated: 2024/05/24 09:42:00 by melanieyane      ###   ########.fr       */
+/*   Updated: 2024/05/24 10:45:33 by melanieyane      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,14 @@
 	}
 
 	void	RobotomyRequestForm::execute(const Bureaucrat &executor) const{
-		
+		if (!this->getSigned())
+			throw NotSignedException();
+		if (executor.getGrade() > this->getExecutingGrade())
+			throw GradeTooLowException();
+			
+		std::cout << "Bzzzz... Bzzzzzzzz... Bzzzzzzzzzzz" << std::endl;
+		if (std::rand() % 2)
+			std::cout << this->_target << " has been robotomized successfully!" << std::endl;
+		else
+			std::cout << "The robotomy failed." << std::endl;
 	}

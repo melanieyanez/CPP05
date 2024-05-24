@@ -6,7 +6,7 @@
 /*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 08:21:08 by melanieyane       #+#    #+#             */
-/*   Updated: 2024/05/24 09:51:56 by melanieyane      ###   ########.fr       */
+/*   Updated: 2024/05/24 11:38:36 by melanieyane      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "AForm.hpp"
 
-class RobotomyRequestForm: AForm{
+class RobotomyRequestForm: public AForm{
 	public:
 		RobotomyRequestForm();
 		RobotomyRequestForm(const std::string &target);

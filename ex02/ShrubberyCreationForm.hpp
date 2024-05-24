@@ -6,7 +6,7 @@
 /*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 08:20:37 by melanieyane       #+#    #+#             */
-/*   Updated: 2024/05/24 09:52:55 by melanieyane      ###   ########.fr       */
+/*   Updated: 2024/05/24 11:38:46 by melanieyane      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "AForm.hpp"
 
-class ShrubberyCreationForm : AForm{
+class ShrubberyCreationForm : public AForm{
 	public:
 		ShrubberyCreationForm();
 		ShrubberyCreationForm(const std::string &target);

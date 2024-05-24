@@ -6,7 +6,7 @@
 /*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 15:59:03 by myanez-p          #+#    #+#             */
-/*   Updated: 2024/05/24 08:54:27 by melanieyane      ###   ########.fr       */
+/*   Updated: 2024/05/24 11:43:56 by melanieyane      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,9 +74,8 @@ void	Bureaucrat::executeForm(const AForm &form){
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << this->_name << " couldn't sign " << form.getName() << " because " << e.what() << "." << std::endl;
+		std::cerr << this->_name << " couldn't execute " << form.getName() << " because " << e.what() << "." << std::endl;
 	}
-	
 }
 
 std::ostream &operator<<(std::ostream& os, const Bureaucrat &src){

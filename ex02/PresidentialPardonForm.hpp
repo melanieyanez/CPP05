@@ -6,7 +6,7 @@
 /*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 08:21:50 by melanieyane       #+#    #+#             */
-/*   Updated: 2024/05/24 09:50:54 by melanieyane      ###   ########.fr       */
+/*   Updated: 2024/05/24 11:38:24 by melanieyane      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "AForm.hpp"
 
-class PresidentialPardonForm : AForm{
+class PresidentialPardonForm : public AForm{
 	public:
 		PresidentialPardonForm();
 		PresidentialPardonForm(const std::string &target);

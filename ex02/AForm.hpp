@@ -6,7 +6,7 @@
 /*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 20:12:11 by melanieyane       #+#    #+#             */
-/*   Updated: 2024/05/24 08:37:20 by melanieyane      ###   ########.fr       */
+/*   Updated: 2024/05/24 10:09:43 by melanieyane      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,30 +36,37 @@ class AForm{
 
 		void				beSigned(const Bureaucrat &signator);
 		virtual void		execute(const Bureaucrat &executor) const = 0;
+		
+
+		class GradeTooHighException : public std::exception{
+			virtual const char	*what() const throw(){
+				return "Oops! Grade is too high!";
+			}
+		};
+
+		class GradeTooLowException : public std::exception{
+			virtual const char	*what() const throw(){
+				return "Oops! Grade is too low!";
+			}
+		};
+	
+		class AlreadySignedException : public std::exception{
+			virtual const char *what() const throw(){
+				return "Oops! Form is already signed!";
+			}
+		};
+		
+		class NotSignedException : public std::exception{
+			virtual const char *what() const throw(){
+				return "Oops! Form has not been signed yet!";
+			};
+		};
 
 	private:
 		const std::string 	_name;
 		bool				_signed;
 		const int			_signingGrade;
 		const int			_executingGrade;
-
-	class GradeTooHighException : public std::exception{
-		virtual const char	*what() const throw(){
-			return "Oops! Grade is too high!";
-		}
-	};
-
-	class GradeTooLowException : public std::exception{
-		virtual const char	*what() const throw(){
-			return "Oops! Grade is too low!";
-		}
-	};
-	
-	class AlreadySignedException : public std::exception{
-		virtual const char *what() const throw(){
-			return "Oops! Form is already signed!";
-		}
-	};
 };
 
 std::ostream &operator<<(std::ostream &os, const AForm &src);

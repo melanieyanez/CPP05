@@ -6,7 +6,7 @@
 /*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 08:22:07 by melanieyane       #+#    #+#             */
-/*   Updated: 2024/05/24 09:36:32 by melanieyane      ###   ########.fr       */
+/*   Updated: 2024/05/24 10:45:38 by melanieyane      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,10 @@
 	}
 
 	void	PresidentialPardonForm::execute(const Bureaucrat &executor) const{
-		
+		if (!this->getSigned())
+			throw NotSignedException();
+		if (executor.getGrade() > this->getExecutingGrade())
+			throw GradeTooLowException();
+			
+		std::cout << this->_target << " has been pardoned by Zaphod Beeblebrox." << std::endl;
 	}
