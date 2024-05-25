@@ -6,7 +6,7 @@
 /*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 21:24:48 by melanieyane       #+#    #+#             */
-/*   Updated: 2024/05/24 21:28:08 by melanieyane      ###   ########.fr       */
+/*   Updated: 2024/05/25 08:13:22 by melanieyane      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,19 @@
 #include <iostream>
 
 #include "AForm.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 class Intern{
-	Intern();
-	Intern(const Intern &src);
-	~Intern();
+	public:
+		Intern();
+		Intern(const Intern &src);
+		~Intern();
 
-	Intern &operator=(const Intern &rhs);
+		Intern &operator=(const Intern &rhs);
 
-	AForm *makeForm(const std::string Name, const std::string Target);
-	
+		AForm *makeForm(const std::string &Name, const std::string &Target) const;	
 };
 
 #endif
