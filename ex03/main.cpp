@@ -6,7 +6,7 @@
 /*   By: myanez-p <myanez-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 15:58:48 by myanez-p          #+#    #+#             */
-/*   Updated: 2024/05/25 13:20:13 by myanez-p         ###   ########.fr       */
+/*   Updated: 2024/05/25 14:25:44 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main() {
     Bureaucrat Chandler("Chandler", 40);
 
     Intern someRandomIntern;
-    AForm* form;
+    AForm *form;
 
     std::cout << "******************************************************" << std::endl;
     std::cout << "* Testing Shrubbery Creation Form creation by Intern *" << std::endl << std::endl;
@@ -72,79 +72,6 @@ int main() {
     } catch (const std::exception &e) {
         std::cerr << e.what() << std::endl;
     }
-
-    return 0;
-}
-
-/*
-int main(){
-    std::cout << "******************************************************" << std::endl;
-    std::cout << "*  *" << std::endl << std::endl;
-    try
-    {
-        
-    }
-    catch (const std::exception& e)
-    {
-        std::cerr << e.what() << std::endl;
-    }
-
-    std::cout << "******************************************************" << std::endl;
-    std::cout << "*  *" << std::endl << std::endl;
-    try
-    {
-   
-    }
-    catch (const std::exception &e)
-    {
-        std::cerr << e.what() << std::endl;
-    }
-
-    std::cout << "******************************************************" << std::endl;
-    std::cout << "*  *" << std::endl << std::endl;
-    try 
-    {
-        
-    }
-    catch (const std::exception& e)
-    {
-        std::cerr << e.what() << std::endl;
-    }
-
-    std::cout << "******************************************************" << std::endl;
-    std::cout << "*  *" << std::endl << std::endl;
-    try
-    {
-        
-    }
-    catch (const std::exception& e)
-    {
-        std::cerr << e.what() << std::endl;
-    }
-
-    std::cout << "******************************************************" << std::endl;
-    std::cout << "*  *" << std::endl << std::endl;
-    try
-    {
-        
-    }
-    catch (const std::exception& e)
-    {
-        std::cerr << e.what() << std::endl;
-    }
-
-
-    std::cout << "******************************************************" << std::endl;
-    std::cout << "* *" << std::endl << std::endl;
-    try
-    {
-     
-    }
-    catch (const std::exception& e)
-    {
-        std::cerr << e.what() << std::endl;
-    }
     
     return 0;
 }
-*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
+/*   By: myanez-p <myanez-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 15:58:48 by myanez-p          #+#    #+#             */
-/*   Updated: 2024/05/24 11:19:38 by melanieyane      ###   ########.fr       */
+/*   Updated: 2024/05/25 14:24:52 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int main(){
 	std::cout << "******************************************************" << std::endl;
 	std::cout << "*Creating a Bureaucrat object with the highest valid grade and incrementing it out of bounds*" << std::endl << std::endl;
 
-		try
+	try
 	{
 		Bureaucrat Monica("Monica", 1);
 		std::cout << Monica << std::endl;
