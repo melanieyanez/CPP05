@@ -6,7 +6,7 @@
 /*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 15:59:06 by myanez-p          #+#    #+#             */
-/*   Updated: 2024/05/24 10:10:37 by melanieyane      ###   ########.fr       */
+/*   Updated: 2024/05/24 08:15:43 by melanieyane      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 #include <string>
 #include <iostream>
 
-#include "Form.hpp"
+#include "AForm.hpp"
 
-class Form;
+class AForm;
 
 class Bureaucrat{
 
@@ -36,23 +36,24 @@ class Bureaucrat{
 		void				incrementGrade();
 		void				decrementGrade();
 
-		void				signForm(Form &toSign);
-
-		class GradeTooHighException : public std::exception{
-			virtual const char	*what() const throw(){
-				return "Oops! Grade is too high!";
-			}
-		};
-
-		class GradeTooLowException : public std::exception{
-			virtual const char	*what() const throw(){
-				return "Oops! Grade is too low!";
-			}
-		};
+		void				signForm(AForm &toSign);
+		void				executeForm(const AForm &form);
 
 	private:
 		const std::string	_name;
 		int 				_grade;	
+
+	class GradeTooHighException : public std::exception{
+		virtual const char	*what() const throw(){
+			return "Oops! Grade is too high!";
+		}
+	};
+
+	class GradeTooLowException : public std::exception{
+		virtual const char	*what() const throw(){
+			return "Oops! Grade is too low!";
+		}
+	};
 };
 
 std::ostream &operator<<(std::ostream& os, const Bureaucrat &src);

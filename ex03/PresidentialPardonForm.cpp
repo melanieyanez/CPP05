@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
+/*   By: myanez-p <myanez-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 08:22:07 by melanieyane       #+#    #+#             */
-/*   Updated: 2024/05/24 10:45:38 by melanieyane      ###   ########.fr       */
+/*   Updated: 2024/05/25 13:15:43 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@
 		if (executor.getGrade() > this->getExecutingGrade())
 			throw GradeTooLowException();
 			
+		std::cout << executor.getName() << " executed " << this->getName() << "." << std::endl;
 		std::cout << this->_target << " has been pardoned by Zaphod Beeblebrox." << std::endl;
 	}
